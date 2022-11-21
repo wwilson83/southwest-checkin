@@ -2,9 +2,10 @@
 
 docker run --name autoluv -dt autoluv
 
-docker exec -it autoluv /bin/bash
-
-autoluv schedule ABCDEF your name
+docker exec -it autoluv autoluv schedule ABCDEF your name
+docker exec -it autoluv atq
+docker exec -it autoluv crontab -l
+docker exec -it autoluv ls -al southwest_headers.json
 
 
 Automatically check in to Southwest flights using this easy-to-use gem. It'll also email you the results so you know ASAP whether a check in was successful. Seconds count when you're fighting for that window or aisle seat!
