@@ -17,7 +17,7 @@ RUN wget https://chromedriver.storage.googleapis.com/107.0.5304.62/chromedriver_
 RUN pip install -r /southwest-headers/requirements.txt
 RUN perl -pi -e 's/pos_/dog_/g' ./chromedriver
 RUN python /southwest-headers/southwest-headers.py /southwest_headers.json
-RUN echo '0 */2 * * * env/bin/python southwest-headers.py /southwest_headers.json' >> mycron
+RUN echo '0 */2 * * * python /southwest-headers/southwest-headers.py /southwest_headers.json' >> mycron
 
 #install new cron file
 RUN crontab mycron
