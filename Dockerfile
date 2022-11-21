@@ -3,6 +3,7 @@ FROM python
 ENV DEBIAN_FRONTEND noninteractive
 ENV TERM xterm-256color
 ENV LUV_HEADERS_FILE /southwest_headers.json
+RUN ln -sf /usr/share/zoneinfo/EST /etc/localtime
 
 # Install tools
 RUN apt update -y && apt upgrade -y && apt autoremove -y && apt autoclean && apt-get install --fix-broken -y
