@@ -4,6 +4,8 @@
 
 Automatically check in to Southwest flights using this easy-to-use gem. It'll also email you the results so you know ASAP whether a check in was successful. Seconds count when you're fighting for that window or aisle seat!
 
+docker build -t autoluv .
+
 docker run --name autoluv -dt autoluv
 
 docker exec -it autoluv autoluv schedule ABCDEF your name
